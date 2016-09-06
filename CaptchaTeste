@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class CaptchaTeste {
+
+	public static void main(String[] args) {
+		Capt c = new Capt();
+
+		Scanner entrada = new Scanner(System.in);
+
+		String valor;
+		int x = 0;
+
+		System.out.println("Captcha");
+
+		System.out.println(valor = c.Captcha());
+
+		System.out.println("Entre com um valor: ");
+		
+		while (x == 0) {
+		String digite = entrada.next();
+			if (digite.equals(valor)) {
+				System.out.println("Logado");
+				x = 1;
+			} else {
+				System.out.println("Tente de novo");
+			
+			}
+			
+		}
+
+	}
+}
