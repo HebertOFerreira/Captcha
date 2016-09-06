@@ -1,0 +1,32 @@
+import java.util.Random;
+
+public class Capt {
+
+
+public String Captcha() {
+	
+	Random random = new Random();
+	
+	
+	
+	int tamanho = 6 + ((random.nextInt()) % 1);
+	StringBuffer str = new StringBuffer();
+
+	for (int i = 0; i < tamanho; i++) {
+		int alfaNumerico = Math.abs((random.nextInt()) % 62);
+		int numCaracteres = 0;
+		if (alfaNumerico < 26) {
+			numCaracteres = 65 + alfaNumerico;
+		} else if (alfaNumerico < 52) {
+			numCaracteres = 97 + (alfaNumerico - 26);
+		} else {
+			numCaracteres = 48 + (alfaNumerico - 52);
+		}
+
+		str.append((char) numCaracteres);
+	}
+	return str.toString();
+	
+	
+}
+}
